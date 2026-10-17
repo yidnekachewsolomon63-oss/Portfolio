@@ -1,0 +1,56 @@
+<!-- REFERENCE ONLY — not part of the React build.
+     Verbatim copy of the Formspree contact-form markup that existed in the
+     working-tree index.html before the Vite scaffold replaced that file.
+     Preserved here so the endpoint, field names and accessibility hooks are
+     not lost. The React implementation lives in src/components/ContactForm.jsx
+     and must keep the same endpoint id (xvkzdrby) and field names. -->
+<form class="pf-form" id="contactForm" action="https://formspree.io/f/xvkzdrby" method="POST" novalidate data-aos="fade-left">
+  <!-- Formspree integration for a static site. The action/method stay in
+       place so the form still works without JavaScript (progressive
+       enhancement); assets/js/portfolio.js upgrades it to AJAX. -->
+  <input type="hidden" name="_subject" value="New message from your portfolio">
+  <input type="hidden" name="_template" value="table">
+
+  <header class="pf-form__head">
+    <h3 class="pf-form__title">Send a message</h3>
+    <p class="pf-form__desc">
+      Fields marked with <span class="pf-form__req" aria-hidden="true">*</span>
+      are required. I usually reply within one business day.
+    </p>
+  </header>
+
+  <fieldset class="pf-form__fieldset">
+    <legend class="pf-visually-hidden">Contact details</legend>
+
+    <div class="pf-form__grid">
+      <div class="pf-form__field">
+        <label for="cf-name">Full name <span class="pf-form__req" aria-hidden="true">*</span></label>
+        <input id="cf-name" name="name" type="text" autocomplete="name" autocapitalize="words" spellcheck="false" placeholder="Jane Doe" minlength="2" maxlength="120" aria-required="true" aria-describedby="cf-name-error" required>
+        <span class="pf-form__error" id="cf-name-error" role="alert"></span>
+      </div>
+
+      <div class="pf-form__field">
+        <label for="cf-email">Email address <span class="pf-form__req" aria-hidden="true">*</span></label>
+        <input id="cf-email" name="email" type="email" autocomplete="email" inputmode="email" spellcheck="false" placeholder="jane@example.com" maxlength="254" aria-required="true" aria-describedby="cf-email-error" required>
+        <span class="pf-form__error" id="cf-email-error" role="alert"></span>
+      </div>
+    </div>
+
+    <div class="pf-form__field">
+      <label for="cf-message">Message <span class="pf-form__req" aria-hidden="true">*</span></label>
+      <textarea id="cf-message" name="message" rows="6" placeholder="Tell me a little about the role, project or question&hellip;" minlength="20" maxlength="2000" aria-required="true" aria-describedby="cf-message-hint cf-message-error" required></textarea>
+      <div class="pf-form__meta">
+        <span class="pf-form__hint" id="cf-message-hint">At least 20 characters.</span>
+        <span class="pf-form__count" id="cf-message-count" aria-hidden="true">0 / 2000</span>
+      </div>
+      <span class="pf-form__error" id="cf-message-error" role="alert"></span>
+    </div>
+  </fieldset>
+
+  <button class="pf-btn pf-btn--primary pf-form__submit" id="cf-submit" type="submit">
+    <span class="pf-form__submit-label">Send message</span>
+    <span class="pf-form__spinner" aria-hidden="true"></span>
+  </button>
+
+  <p class="pf-form__status" id="cf-status" role="status" aria-live="polite" tabindex="-1"></p>
+</form>

@@ -1,0 +1,95 @@
+/* ------------------------------------------------------------------------
+   Design tokens for the React portfolio.
+   Ported from the previous portfolio design system (assets/css/portfolio.css)
+   but rebuilt as a standalone layer: no Bootstrap reboot, no template CSS,
+   no AOS. Every foreground/background pair used for text is documented with
+   its measured contrast ratio so the hero can no longer resolve to a 1:1
+   colour-on-same-colour collision.
+   ------------------------------------------------------------------------ */
+
+:root {
+  /* Type ------------------------------------------------------------------ */
+  --pf-font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --pf-font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --pf-font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
+
+  --pf-step--1: clamp(0.8rem, 0.77rem + 0.15vw, 0.875rem);
+  --pf-step-0: clamp(1rem, 0.96rem + 0.2vw, 1.075rem);
+  --pf-step-1: clamp(1.15rem, 1.08rem + 0.35vw, 1.3rem);
+  --pf-step-2: clamp(1.4rem, 1.25rem + 0.75vw, 1.75rem);
+  --pf-step-3: clamp(1.75rem, 1.45rem + 1.5vw, 2.4rem);
+  --pf-step-4: clamp(2.2rem, 1.6rem + 3vw, 3.5rem);
+
+  /* Spacing --------------------------------------------------------------- */
+  --pf-sp-1: 0.25rem;
+  --pf-sp-2: 0.5rem;
+  --pf-sp-3: 0.75rem;
+  --pf-sp-4: 1rem;
+  --pf-sp-5: 1.5rem;
+  --pf-sp-6: 2rem;
+  --pf-sp-7: 2.5rem;
+  --pf-sp-8: 3rem;
+  --pf-sp-9: 4rem;
+  --pf-section-y: clamp(4rem, 2.5rem + 6vw, 7rem);
+
+  /* Shape ----------------------------------------------------------------- */
+  --pf-radius-sm: 10px;
+  --pf-radius: 16px;
+  --pf-radius-lg: 22px;
+  --pf-radius-pill: 999px;
+  --pf-maxw: 1200px;
+  --pf-header-h: 4.75rem;
+
+  /* Surfaces -------------------------------------------------------------- */
+  --pf-paper: #ffffff;
+  --pf-paper-2: #f8fafc;
+  --pf-paper-3: #eef2f7;
+  --pf-dark: #0b1120; /* hero, footer, dark bands */
+  --pf-dark-2: #111827;
+  --pf-surface-dark: #1e293b;
+
+  /* Text on dark surfaces (all >= 7:1 against --pf-dark) ------------------ */
+  --pf-on-dark: #ffffff; /* 18.8 : 1 */
+  --pf-on-dark-muted: #cbd5e1; /* 12.7 : 1 */
+  --pf-on-dark-subtle: #94a3b8; /*  7.3 : 1 */
+  --pf-accent-on-dark: #c4b5fd; /* violet-300, > 8 : 1 */
+  --pf-cyan-on-dark: #67e8f9; /* 13.0 : 1 */
+
+  /* Text on light surfaces (all >= 7:1 against --pf-paper) ---------------- */
+  --pf-text: #0f172a; /* 17.9 : 1 */
+  --pf-muted: #475569; /*  7.6 : 1 */
+  --pf-accent-on-light: #6d28d9; /*  7.1 : 1 */
+
+  /* Brand / accents ------------------------------------------------------- */
+  --pf-accent: #6d28d9; /* filled brand, white text = 7.1 : 1 */
+  --pf-accent-hover: #5b21b6;
+  --pf-accent-soft: #ede9fe;
+  --pf-cyan: #06b6d4; /* 7.8 : 1 on --pf-dark */
+  --pf-gold: #d4af37; /* 9.0 : 1 on --pf-dark */
+
+  /* Lines ----------------------------------------------------------------- */
+  --pf-border: #e2e8f0; /* decorative separators */
+  --pf-border-strong: #64748b; /* form control boundaries, 4.8 : 1 */
+
+  /* Feedback -------------------------------------------------------------- */
+  --pf-danger: #991b1b; /* 8.3 : 1 on paper */
+  --pf-danger-soft: #fef2f2;
+  --pf-success: #14532d; /* 9.1 : 1 on paper */
+  --pf-success-soft: #f0fdf4;
+
+  /* Focus ----------------------------------------------------------------- */
+  --pf-focus-light: #0284c7;
+  --pf-focus-dark: #7dd3fc;
+
+  /* Elevation ------------------------------------------------------------- */
+  --pf-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 12px 32px -18px rgba(15, 23, 42, 0.28);
+  --pf-shadow-lift: 0 8px 20px -10px rgba(15, 23, 42, 0.32), 0 26px 50px -26px rgba(15, 23, 42, 0.35);
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --pf-muted: #334155;
+    --pf-on-dark-muted: #e2e8f0;
+    --pf-border: #94a3b8;
+  }
+}
