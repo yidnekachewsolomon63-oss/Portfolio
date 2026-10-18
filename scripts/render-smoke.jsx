@@ -86,13 +86,15 @@ export function runChecks() {
     check(`home links to the ${fragment} repository`, home.includes(fragment))
   })
 
+  check('forum live demo link is rendered', home.includes('https://evangadiforum.tsedetech.com/'))
+  check('chatgpt live demo link is rendered', home.includes('https://yidnekachew-gpt-chat.vercel.app/'))
   check('netflix live demo link is rendered', home.includes('https://netclone.tsedetech.com/'))
   check('apple live demo link is rendered', home.includes('https://nigist.tsedetech.com/'))
 
   const pendingCount = (home.match(/Live demo pending/g) ?? []).length
   check(
-    'exactly two projects show "Live demo pending"',
-    pendingCount === 2,
+    'no project shows "Live demo pending" now that every project has a demo',
+    pendingCount === 0,
     `found ${pendingCount}`,
   )
 

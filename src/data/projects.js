@@ -17,6 +17,10 @@
  *   - Apple Clone: this project was missing from the previous data file. It is
  *     added as project 4 using only facts read from its repository tree and its
  *     deployed page. Unknown fields are marked "TO CONFIRM" instead of guessed.
+ *   - Forum and ChatGPT Clone: live demo URLs supplied by the owner
+ *     (https://evangadiforum.tsedetech.com/ and
+ *     https://yidnekachew-gpt-chat.vercel.app/) are now part of the record, so
+ *     every project in this file has a live demo.
  *
  * Order is significant: projects are rendered in the order of this array.
  */
@@ -39,13 +43,13 @@ export const PROJECTS = [
       'A community Q&A forum where Gemini-powered semantic search, RAG over user PDFs and an AI draft coach help members ask sharper questions and find answers faster.',
     tags: ['Node.js', 'Express 5', 'MySQL', 'React 19', 'Google Gemini', 'RAG'],
     repo: 'https://github.com/yidnekachewsolomon63-oss/ai-powered-forum',
-    live: null,
+    live: 'https://evangadiforum.tsedetech.com/',
     lead: 'A full-stack community forum that layers semantic search and retrieval-augmented generation on top of a classic questions-and-answers workflow.',
     meta: [
       { k: 'Role', v: 'Full-stack developer' },
       { k: 'Stack', v: 'Express 5, MySQL, React 19, Google Gemini' },
       { k: 'Core idea', v: 'Semantic search + RAG over user documents' },
-      { k: 'Status', v: 'Source available on GitHub' },
+      { k: 'Status', v: 'Source on GitHub + live demo' },
     ],
     overview: [
       "Members register, sign in, ask questions, answer, and vote. Every question and answer is embedded with Google's Gemini embedding model and compared with cosine similarity, so the forum can surface related discussions and rank the most relevant replies instead of relying on keyword matching alone.",
@@ -91,14 +95,14 @@ export const PROJECTS = [
       'A ChatGPT-style chat interface: a React single-page app talking to an Express API that stores conversation history in MySQL and returns replies from Google Gemini.',
     tags: ['React 19', 'Node.js', 'Express 5', 'MySQL', 'Google Gemini'],
     repo: 'https://github.com/yidnekachewsolomon63-oss/GptChatClone',
-    live: null,
+    live: 'https://yidnekachew-gpt-chat.vercel.app/',
     lead: 'A conversational assistant that recreates the core ChatGPT experience end to end, from the chat UI down to stored conversation history and Gemini responses.',
     meta: [
       { k: 'Role', v: 'Full-stack developer' },
       { k: 'Stack', v: 'React 19, Express 5, MySQL, Google Gemini' },
       { k: 'Core idea', v: 'Stored multi-turn chat history' },
       { k: 'Repository', v: 'Available on GitHub' },
-      { k: 'Status', v: 'Runs locally (frontend + backend)' },
+      { k: 'Status', v: 'Source on GitHub + live demo' },
     ],
     overview: [
       'The frontend is a React single-page app with a sidebar of conversations, a message thread, and a composer. It calls an Express backend through a small API client to load existing conversations and send new messages.',
@@ -113,7 +117,7 @@ export const PROJECTS = [
     technical: [
       'Request flow: React client to Express route, controller, then service, which reads history from MySQL and calls Gemini before persisting the exchange.',
       'The last five messages are supplied as conversational context to keep replies coherent across turns.',
-      'The repository is public on GitHub. The project is run locally, so no public demo URL is listed — the description reflects the verified implementation rather than a deployment.',
+      'The repository is public on GitHub and the project is deployed; the live demo link points at the running app, with the repository as the fallback.',
     ],
     gallery: [{ src: IMAGES.chatgptChat, caption: 'Chat interface' }],
     architecture: {
