@@ -12,7 +12,7 @@
  *     github.com/yidnekachewsolomon63-oss/GptChatClone is now public
  *     (API returned private=false), so it is linked and the flag is removed.
  *   - Netflix Clone: a live URL is now part of the record
- *     (https://netclone.tsedetech.com/, HTTP 200) and the required TMDB
+   *     (https://yidnek-netfliclone.vercel.app/) and the required TMDB
  *     attribution is attached.
  *   - Apple Clone: this project was missing from the previous data file. It is
  *     added as project 4 using only facts read from its repository tree and its
@@ -142,7 +142,7 @@ export const PROJECTS = [
       'A responsive Netflix-style streaming interface powered by the TMDB API — a featured hero banner plus genre rows with hover-preview movie cards.',
     tags: ['React 19', 'Vite', 'TMDB API', 'Swiper', 'React Router'],
     repo: 'https://github.com/yidnekachewsolomon63-oss/YidNetMovieBD',
-    live: 'https://netclone.tsedetech.com/',
+    live: 'https://yidnek-netfliclone.vercel.app/',
     lead: 'A media-browsing front end that recreates the Netflix layout and wires it to live movie data from TMDB.',
     meta: [
       { k: 'Role', v: 'Frontend developer' },

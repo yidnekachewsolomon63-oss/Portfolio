@@ -88,7 +88,7 @@ export function runChecks() {
 
   check('forum live demo link is rendered', home.includes('https://evangadiforum.tsedetech.com/'))
   check('chatgpt live demo link is rendered', home.includes('https://yidnekachew-gpt-chat.vercel.app/'))
-  check('netflix live demo link is rendered', home.includes('https://netclone.tsedetech.com/'))
+  check('netflix live demo link is rendered', home.includes('https://yidnek-netfliclone.vercel.app/'))
   check('apple live demo link is rendered', home.includes('https://nigist.tsedetech.com/'))
 
   const pendingCount = (home.match(/Live demo pending/g) ?? []).length
