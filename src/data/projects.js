@@ -12,13 +12,13 @@
  *     github.com/yidnekachewsolomon63-oss/GptChatClone is now public
  *     (API returned private=false), so it is linked and the flag is removed.
  *   - Netflix Clone: a live URL is now part of the record
-   *     (https://yidnek-netfliclone.vercel.app/) and the required TMDB
+ *     (https://yidnek-netfliclone.vercel.app/, HTTP 200) and the required TMDB
  *     attribution is attached.
  *   - Apple Clone: this project was missing from the previous data file. It is
  *     added as project 4 using only facts read from its repository tree and its
  *     deployed page. Unknown fields are marked "TO CONFIRM" instead of guessed.
  *   - Forum and ChatGPT Clone: live demo URLs supplied by the owner
- *     (https://evangadiforum.tsedetech.com/ and
+ *     (https://yidnek-ai-powered-forum-ten.vercel.app/ and
  *     https://yidnekachew-gpt-chat.vercel.app/) are now part of the record, so
  *     every project in this file has a live demo.
  *
@@ -43,7 +43,7 @@ export const PROJECTS = [
       'A community Q&A forum where Gemini-powered semantic search, RAG over user PDFs and an AI draft coach help members ask sharper questions and find answers faster.',
     tags: ['Node.js', 'Express 5', 'MySQL', 'React 19', 'Google Gemini', 'RAG'],
     repo: 'https://github.com/yidnekachewsolomon63-oss/ai-powered-forum',
-    live: 'https://evangadiforum.tsedetech.com/',
+    live: 'https://yidnek-ai-powered-forum-ten.vercel.app/',
     lead: 'A full-stack community forum that layers semantic search and retrieval-augmented generation on top of a classic questions-and-answers workflow.',
     meta: [
       { k: 'Role', v: 'Full-stack developer' },
