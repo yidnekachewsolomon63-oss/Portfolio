@@ -86,7 +86,7 @@ export function runChecks() {
     check(`home links to the ${fragment} repository`, home.includes(fragment))
   })
 
-  check('forum live demo link is rendered', home.includes('https://evangadiforum.tsedetech.com/'))
+  check('forum live demo link is rendered', home.includes('https://yidnek-ai-powered-forum-ten.vercel.app/'))
   check('chatgpt live demo link is rendered', home.includes('https://yidnekachew-gpt-chat.vercel.app/'))
   check('netflix live demo link is rendered', home.includes('https://yidnek-netfliclone.vercel.app/'))
   check('apple live demo link is rendered', home.includes('https://nigist.tsedetech.com/'))
